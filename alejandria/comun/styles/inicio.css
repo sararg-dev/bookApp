@@ -1,0 +1,959 @@
+.inicio_contenido {
+  overflow: hidden;
+}
+.top_libros h3, .top_negra h3, .top_historia h3, .top_fantasia h3{
+  margin-top: 30px;
+  margin-left: 180px;
+  margin-bottom: 45px;
+}
+
+.slider-wrapper .slider {
+    width: 100%;
+}
+
+.slider-wrapper .slider input {
+  display: none;
+}
+
+.slider-wrapper .testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 300px; /* Ajustado para reflejar la nueva altura de los elementos */
+  perspective: 1000px;
+}
+
+.slider-wrapper .testimonials .item {
+  top: 0;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: grey;
+  width: 125px; /* Ajustar el ancho si es necesario para mantener la proporción */
+  height: 200px;
+  text-align: center;
+  transition: transform 0.4s;
+  -webkit-transform-style: preserve-3d;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  user-select: none;
+  cursor: pointer;
+}
+
+.slider-wrapper .testimonials .item a {
+  height: 200px;
+  display: none;
+  position: absolute;
+  width: 125px; /* Ajustar el ancho si es necesario para mantener la proporción */
+  top: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+
+.slider-wrapper .testimonials .item img {
+  height: 100%;
+  width: 100%;
+  filter: brightness(0.8);
+  transition: filter 0.4s;
+}
+
+.slider-wrapper .testimonials .item p {
+  color: #ddd;
+}
+
+.slider-wrapper .testimonials .item h2 {
+  font-size: 14px;
+}
+
+.slider-wrapper .dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -75px;
+}
+
+.slider-wrapper .dots label {
+  display: block;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #BD871F;
+  margin: 7px;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.slider-wrapper.top_libros #t-1:checked ~ .dots label[for=t-1] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_libros #t-1:checked ~ .dots label[for=t-2] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_libros #t-1:checked ~ .testimonials label[for=t-1] {
+  z-index: 4;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_libros #t-1:checked ~ .testimonials label[for=t-1] a {
+  display: block;
+}
+
+.slider-wrapper.top_libros #t-1:checked ~ .testimonials label[for=t-1] img {
+  filter: none;
+}
+
+.slider-wrapper.top_libros #t-1:checked ~ .testimonials label[for=t-2] {
+  transform: translateX(100px) translateZ(-45px) rotateY(-15deg); /* Ajustado */
+  z-index: 3;
+}
+
+.slider-wrapper.top_libros #t-1:checked ~ .testimonials label[for=t-3] {
+  transform: translateX(200px) translateZ(-90px) rotateY(-25deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_libros #t-1:checked ~ .testimonials label[for=t-4] {
+  transform: translateX(300px) translateZ(-135px) rotateY(-35deg); /* Ajustado */
+  z-index: 1;
+}
+
+.slider-wrapper.top_libros #t-1:checked ~ .testimonials label[for=t-5] {
+  transform: translateX(400px) translateZ(-180px) rotateY(-45deg); /* Ajustado */
+}
+
+.slider-wrapper.top_libros #t-2:checked ~ .dots label[for=t-1] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_libros #t-2:checked ~ .dots label[for=t-2] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_libros #t-2:checked ~ .dots label[for=t-3] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_libros #t-2:checked ~ .testimonials label[for=t-1] {
+  transform: translateX(-100px) translateZ(-45px) rotateY(15deg); /* Ajustado */
+}
+
+.slider-wrapper.top_libros #t-2:checked ~ .testimonials label[for=t-2] {
+  z-index: 3;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_libros #t-2:checked ~ .testimonials label[for=t-2] a {
+  display: block;
+}
+
+.slider-wrapper.top_libros #t-2:checked ~ .testimonials label[for=t-2] img {
+  filter: none;
+}
+
+.slider-wrapper.top_libros #t-2:checked ~ .testimonials label[for=t-3] {
+  transform: translateX(100px) translateZ(-45px) rotateY(-15deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_libros #t-2:checked ~ .testimonials label[for=t-4] {
+  transform: translateX(200px) translateZ(-90px) rotateY(-25deg); /* Ajustado */
+  z-index: 1;
+}
+
+.slider-wrapper.top_libros #t-2:checked ~ .testimonials label[for=t-5] {
+  transform: translateX(300px) translateZ(-135px) rotateY(-35deg); /* Ajustado */
+}
+
+.slider-wrapper.top_libros #t-3:checked ~ .dots label[for=t-2] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_libros #t-3:checked ~ .dots label[for=t-3] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_libros #t-3:checked ~ .dots label[for=t-4] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_libros #t-3:checked ~ .testimonials label[for=t-1] {
+  transform: translateX(-200px) translateZ(-90px) rotateY(25deg); /* Ajustado */
+}
+
+.slider-wrapper.top_libros #t-3:checked ~ .testimonials label[for=t-2] {
+  transform: translateX(-100px) translateZ(-45px) rotateY(15deg); /* Ajustado */
+}
+
+.slider-wrapper.top_libros #t-3:checked ~ .testimonials label[for=t-3] {
+  z-index: 3;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_libros #t-3:checked ~ .testimonials label[for=t-3] a {
+  display: block;
+}
+
+.slider-wrapper.top_libros #t-3:checked ~ .testimonials label[for=t-3] img {
+  filter: none;
+}
+
+.slider-wrapper.top_libros #t-3:checked ~ .testimonials label[for=t-4] {
+  transform: translateX(100px) translateZ(-45px) rotateY(-15deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_libros #t-3:checked ~ .testimonials label[for=t-5] {
+  transform: translateX(200px) translateZ(-90px) rotateY(-25deg); /* Ajustado */
+}
+
+.slider-wrapper.top_libros #t-4:checked ~ .dots label[for=t-3] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_libros #t-4:checked ~ .dots label[for=t-4] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_libros #t-4:checked ~ .dots label[for=t-5] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_libros #t-4:checked ~ .testimonials label[for=t-1] {
+  transform: translateX(-300px) translateZ(-135px) rotateY(35deg); /* Ajustado */
+}
+
+.slider-wrapper.top_libros #t-4:checked ~ .testimonials label[for=t-2] {
+  transform: translateX(-200px) translateZ(-90px) rotateY(25deg); /* Ajustado */
+}
+
+.slider-wrapper.top_libros #t-4:checked ~ .testimonials label[for=t-3] {
+  transform: translateX(-100px) translateZ(-45px) rotateY(15deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_libros #t-4:checked ~ .testimonials label[for=t-4] {
+  z-index: 3;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_libros #t-4:checked ~ .testimonials label[for=t-4] a {
+  display: block;
+}
+
+.slider-wrapper.top_libros #t-4:checked ~ .testimonials label[for=t-4] img {
+  filter: none;
+}
+
+.slider-wrapper.top_libros #t-4:checked ~ .testimonials label[for=t-5] {
+  transform: translateX(100px) translateZ(-45px) rotateY(-15deg); /* Ajustado */
+  z-index: 1;
+}
+
+.slider-wrapper.top_libros #t-5:checked ~ .dots label[for=t-4] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_libros #t-5:checked ~ .dots label[for=t-5] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_libros #t-5:checked ~ .testimonials label[for=t-1] {
+  transform: translateX(-400px) translateZ(-180px) rotateY(45deg); /* Ajustado */
+  z-index: 1;
+}
+
+.slider-wrapper.top_libros #t-5:checked ~ .testimonials label[for=t-2] {
+  transform: translateX(-300px) translateZ(-135px) rotateY(35deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_libros #t-5:checked ~ .testimonials label[for=t-3] {
+  transform: translateX(-200px) translateZ(-90px) rotateY(25deg); /* Ajustado */
+  z-index: 3;
+}
+
+.slider-wrapper.top_libros #t-5:checked ~ .testimonials label[for=t-4] {
+  transform: translateX(-100px) translateZ(-45px) rotateY(15deg); /* Ajustado */
+  z-index: 4;
+}
+
+.slider-wrapper.top_libros #t-5:checked ~ .testimonials label[for=t-5] {
+  z-index: 5;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_libros #t-5:checked ~ .testimonials label[for=t-5] a {
+  display: block;
+}
+
+.slider-wrapper.top_libros #t-5:checked ~ .testimonials label[for=t-5] img {
+  filter: none;
+}
+/* ***************************** NOVELA NEGRA ***************************************************************** */
+.slider-wrapper.top_negra #tn-1:checked ~ .dots label[for=tn-1] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_negra #tn-1:checked ~ .dots label[for=tn-2] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_negra #tn-1:checked ~ .testimonials label[for=tn-1] {
+  z-index: 4;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_negra #tn-1:checked ~ .testimonials label[for=tn-1] a {
+  display: block;
+}
+
+.slider-wrapper.top_negra #tn-1:checked ~ .testimonials label[for=tn-1] img {
+  filter: none;
+}
+
+.slider-wrapper.top_negra #tn-1:checked ~ .testimonials label[for=tn-2] {
+  transform: translateX(100px) translateZ(-45px) rotateY(-15deg); /* Ajustado */
+  z-index: 3;
+}
+
+.slider-wrapper.top_negra #tn-1:checked ~ .testimonials label[for=tn-3] {
+  transform: translateX(200px) translateZ(-90px) rotateY(-25deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_negra #tn-1:checked ~ .testimonials label[for=tn-4] {
+  transform: translateX(300px) translateZ(-135px) rotateY(-35deg); /* Ajustado */
+  z-index: 1;
+}
+
+.slider-wrapper.top_negra #tn-1:checked ~ .testimonials label[for=tn-5] {
+  transform: translateX(400px) translateZ(-180px) rotateY(-45deg); /* Ajustado */
+}
+
+.slider-wrapper.top_negra #tn-2:checked ~ .dots label[for=tn-1] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_negra #tn-2:checked ~ .dots label[for=tn-2] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_negra #tn-2:checked ~ .dots label[for=tn-3] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_negra #tn-2:checked ~ .testimonials label[for=tn-1] {
+  transform: translateX(-100px) translateZ(-45px) rotateY(15deg); /* Ajustado */
+}
+
+.slider-wrapper.top_negra #tn-2:checked ~ .testimonials label[for=tn-2] {
+  z-index: 3;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_negra #tn-2:checked ~ .testimonials label[for=tn-2] a {
+  display: block;
+}
+
+.slider-wrapper.top_negra #tn-2:checked ~ .testimonials label[for=tn-2] img {
+  filter: none;
+}
+
+.slider-wrapper.top_negra #tn-2:checked ~ .testimonials label[for=tn-3] {
+  transform: translateX(100px) translateZ(-45px) rotateY(-15deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_negra #tn-2:checked ~ .testimonials label[for=tn-4] {
+  transform: translateX(200px) translateZ(-90px) rotateY(-25deg); /* Ajustado */
+  z-index: 1;
+}
+
+.slider-wrapper.top_negra #tn-2:checked ~ .testimonials label[for=tn-5] {
+  transform: translateX(300px) translateZ(-135px) rotateY(-35deg); /* Ajustado */
+}
+
+.slider-wrapper.top_negra #tn-3:checked ~ .dots label[for=tn-2] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_negra #tn-3:checked ~ .dots label[for=tn-3] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_negra #tn-3:checked ~ .dots label[for=tn-4] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_negra #tn-3:checked ~ .testimonials label[for=tn-1] {
+  transform: translateX(-200px) translateZ(-90px) rotateY(25deg); /* Ajustado */
+}
+
+.slider-wrapper.top_negra #tn-3:checked ~ .testimonials label[for=tn-2] {
+  transform: translateX(-100px) translateZ(-45px) rotateY(15deg); /* Ajustado */
+}
+
+.slider-wrapper.top_negra #tn-3:checked ~ .testimonials label[for=tn-3] {
+  z-index: 3;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_negra #tn-3:checked ~ .testimonials label[for=tn-3] a {
+  display: block;
+}
+
+.slider-wrapper.top_negra #tn-3:checked ~ .testimonials label[for=tn-3] img {
+  filter: none;
+}
+
+.slider-wrapper.top_negra #tn-3:checked ~ .testimonials label[for=tn-4] {
+  transform: translateX(100px) translateZ(-45px) rotateY(-15deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_negra #tn-3:checked ~ .testimonials label[for=tn-5] {
+  transform: translateX(200px) translateZ(-90px) rotateY(-25deg); /* Ajustado */
+}
+
+.slider-wrapper.top_negra #tn-4:checked ~ .dots label[for=tn-3] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_negra #tn-4:checked ~ .dots label[for=tn-4] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_negra #tn-4:checked ~ .dots label[for=tn-5] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_negra #tn-4:checked ~ .testimonials label[for=tn-1] {
+  transform: translateX(-300px) translateZ(-135px) rotateY(35deg); /* Ajustado */
+}
+
+.slider-wrapper.top_negra #tn-4:checked ~ .testimonials label[for=tn-2] {
+  transform: translateX(-200px) translateZ(-90px) rotateY(25deg); /* Ajustado */
+}
+
+.slider-wrapper.top_negra #tn-4:checked ~ .testimonials label[for=tn-3] {
+  transform: translateX(-100px) translateZ(-45px) rotateY(15deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_negra #tn-4:checked ~ .testimonials label[for=tn-4] {
+  z-index: 3;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_negra #tn-4:checked ~ .testimonials label[for=tn-4] a {
+  display: block;
+}
+
+.slider-wrapper.top_negra #tn-4:checked ~ .testimonials label[for=tn-4] img {
+  filter: none;
+}
+
+.slider-wrapper.top_negra #tn-4:checked ~ .testimonials label[for=tn-5] {
+  transform: translateX(100px) translateZ(-45px) rotateY(-15deg); /* Ajustado */
+  z-index: 1;
+}
+
+.slider-wrapper.top_negra #tn-5:checked ~ .dots label[for=tn-4] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_negra #tn-5:checked ~ .dots label[for=tn-5] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_negra #tn-5:checked ~ .testimonials label[for=tn-1] {
+  transform: translateX(-400px) translateZ(-180px) rotateY(45deg); /* Ajustado */
+  z-index: 1;
+}
+
+.slider-wrapper.top_negra #tn-5:checked ~ .testimonials label[for=tn-2] {
+  transform: translateX(-300px) translateZ(-135px) rotateY(35deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_negra #tn-5:checked ~ .testimonials label[for=tn-3] {
+  transform: translateX(-200px) translateZ(-90px) rotateY(25deg); /* Ajustado */
+  z-index: 3;
+}
+
+.slider-wrapper.top_negra #tn-5:checked ~ .testimonials label[for=tn-4] {
+  transform: translateX(-100px) translateZ(-45px) rotateY(15deg); /* Ajustado */
+  z-index: 4;
+}
+
+.slider-wrapper.top_negra #tn-5:checked ~ .testimonials label[for=tn-5] {
+  z-index: 5;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_negra #tn-5:checked ~ .testimonials label[for=tn-5] a {
+  display: block;
+}
+
+.slider-wrapper.top_negra #tn-5:checked ~ .testimonials label[for=tn-5] img {
+  filter: none;
+}
+/* ***************************** NOVELA HISTÓRICA ***************************************************************** */
+.slider-wrapper.top_historia #th-1:checked ~ .dots label[for=th-1] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_historia #th-1:checked ~ .dots label[for=th-2] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_historia #th-1:checked ~ .testimonials label[for=th-1] {
+  z-index: 4;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_historia #th-1:checked ~ .testimonials label[for=th-1] a {
+  display: block;
+}
+
+.slider-wrapper.top_historia #th-1:checked ~ .testimonials label[for=th-1] img {
+  filter: none;
+}
+
+.slider-wrapper.top_historia #th-1:checked ~ .testimonials label[for=th-2] {
+  transform: translateX(100px) translateZ(-45px) rotateY(-15deg); /* Ajustado */
+  z-index: 3;
+}
+
+.slider-wrapper.top_historia #th-1:checked ~ .testimonials label[for=th-3] {
+  transform: translateX(200px) translateZ(-90px) rotateY(-25deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_historia #th-1:checked ~ .testimonials label[for=th-4] {
+  transform: translateX(300px) translateZ(-135px) rotateY(-35deg); /* Ajustado */
+  z-index: 1;
+}
+
+.slider-wrapper.top_historia #th-1:checked ~ .testimonials label[for=th-5] {
+  transform: translateX(400px) translateZ(-180px) rotateY(-45deg); /* Ajustado */
+}
+
+.slider-wrapper.top_historia #th-2:checked ~ .dots label[for=th-1] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_historia #th-2:checked ~ .dots label[for=th-2] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_historia #th-2:checked ~ .dots label[for=th-3] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_historia #th-2:checked ~ .testimonials label[for=th-1] {
+  transform: translateX(-100px) translateZ(-45px) rotateY(15deg); /* Ajustado */
+}
+
+.slider-wrapper.top_historia #th-2:checked ~ .testimonials label[for=th-2] {
+  z-index: 3;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_historia #th-2:checked ~ .testimonials label[for=th-2] a {
+  display: block;
+}
+
+.slider-wrapper.top_historia #th-2:checked ~ .testimonials label[for=th-2] img {
+  filter: none;
+}
+
+.slider-wrapper.top_historia #th-2:checked ~ .testimonials label[for=th-3] {
+  transform: translateX(100px) translateZ(-45px) rotateY(-15deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_historia #th-2:checked ~ .testimonials label[for=th-4] {
+  transform: translateX(200px) translateZ(-90px) rotateY(-25deg); /* Ajustado */
+  z-index: 1;
+}
+
+.slider-wrapper.top_historia #th-2:checked ~ .testimonials label[for=th-5] {
+  transform: translateX(300px) translateZ(-135px) rotateY(-35deg); /* Ajustado */
+}
+
+.slider-wrapper.top_historia #th-3:checked ~ .dots label[for=th-2] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_historia #th-3:checked ~ .dots label[for=th-3] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_historia #th-3:checked ~ .dots label[for=th-4] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_historia #th-3:checked ~ .testimonials label[for=th-1] {
+  transform: translateX(-200px) translateZ(-90px) rotateY(25deg); /* Ajustado */
+}
+
+.slider-wrapper.top_historia #th-3:checked ~ .testimonials label[for=th-2] {
+  transform: translateX(-100px) translateZ(-45px) rotateY(15deg); /* Ajustado */
+}
+
+.slider-wrapper.top_historia #th-3:checked ~ .testimonials label[for=th-3] {
+  z-index: 3;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_historia #th-3:checked ~ .testimonials label[for=th-3] a {
+  display: block;
+}
+
+.slider-wrapper.top_historia #th-3:checked ~ .testimonials label[for=th-3] img {
+  filter: none;
+}
+
+.slider-wrapper.top_historia #th-3:checked ~ .testimonials label[for=th-4] {
+  transform: translateX(100px) translateZ(-45px) rotateY(-15deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_historia #th-3:checked ~ .testimonials label[for=th-5] {
+  transform: translateX(200px) translateZ(-90px) rotateY(-25deg); /* Ajustado */
+}
+
+.slider-wrapper.top_historia #th-4:checked ~ .dots label[for=th-3] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_historia #th-4:checked ~ .dots label[for=th-4] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_historia #th-4:checked ~ .dots label[for=th-5] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_historia #th-4:checked ~ .testimonials label[for=th-1] {
+  transform: translateX(-300px) translateZ(-135px) rotateY(35deg); /* Ajustado */
+}
+
+.slider-wrapper.top_historia #th-4:checked ~ .testimonials label[for=th-2] {
+  transform: translateX(-200px) translateZ(-90px) rotateY(25deg); /* Ajustado */
+}
+
+.slider-wrapper.top_historia #th-4:checked ~ .testimonials label[for=th-3] {
+  transform: translateX(-100px) translateZ(-45px) rotateY(15deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_historia #th-4:checked ~ .testimonials label[for=th-4] {
+  z-index: 3;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_historia #th-4:checked ~ .testimonials label[for=th-4] a {
+  display: block;
+}
+
+.slider-wrapper.top_historia #th-4:checked ~ .testimonials label[for=th-4] img {
+  filter: none;
+}
+
+.slider-wrapper.top_historia #th-4:checked ~ .testimonials label[for=th-5] {
+  transform: translateX(100px) translateZ(-45px) rotateY(-15deg); /* Ajustado */
+  z-index: 1;
+}
+
+.slider-wrapper.top_historia #th-5:checked ~ .dots label[for=th-4] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_historia #th-5:checked ~ .dots label[for=th-5] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_historia #th-5:checked ~ .testimonials label[for=th-1] {
+  transform: translateX(-400px) translateZ(-180px) rotateY(45deg); /* Ajustado */
+  z-index: 1;
+}
+
+.slider-wrapper.top_historia #th-5:checked ~ .testimonials label[for=th-2] {
+  transform: translateX(-300px) translateZ(-135px) rotateY(35deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_historia #th-5:checked ~ .testimonials label[for=th-3] {
+  transform: translateX(-200px) translateZ(-90px) rotateY(25deg); /* Ajustado */
+  z-index: 3;
+}
+
+.slider-wrapper.top_historia #th-5:checked ~ .testimonials label[for=th-4] {
+  transform: translateX(-100px) translateZ(-45px) rotateY(15deg); /* Ajustado */
+  z-index: 4;
+}
+
+.slider-wrapper.top_historia #th-5:checked ~ .testimonials label[for=th-5] {
+  z-index: 5;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_historia #th-5:checked ~ .testimonials label[for=th-5] a {
+  display: block;
+}
+
+.slider-wrapper.top_historia #th-5:checked ~ .testimonials label[for=th-5] img {
+  filter: none;
+}
+/* ***************************** NOVELA FANTÁSTICA ***************************************************************** */
+.slider-wrapper.top_fantasia #tf-1:checked ~ .dots label[for=tf-1] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_fantasia #tf-1:checked ~ .dots label[for=tf-2] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_fantasia #tf-1:checked ~ .testimonials label[for=tf-1] {
+  z-index: 4;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_fantasia #tf-1:checked ~ .testimonials label[for=tf-1] a {
+  display: block;
+}
+
+.slider-wrapper.top_fantasia #tf-1:checked ~ .testimonials label[for=tf-1] img {
+  filter: none;
+}
+
+.slider-wrapper.top_fantasia #tf-1:checked ~ .testimonials label[for=tf-2] {
+  transform: translateX(100px) translateZ(-45px) rotateY(-15deg); /* Ajustado */
+  z-index: 3;
+}
+
+.slider-wrapper.top_fantasia #tf-1:checked ~ .testimonials label[for=tf-3] {
+  transform: translateX(200px) translateZ(-90px) rotateY(-25deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_fantasia #tf-1:checked ~ .testimonials label[for=tf-4] {
+  transform: translateX(300px) translateZ(-135px) rotateY(-35deg); /* Ajustado */
+  z-index: 1;
+}
+
+.slider-wrapper.top_fantasia #tf-1:checked ~ .testimonials label[for=tf-5] {
+  transform: translateX(400px) translateZ(-180px) rotateY(-45deg); /* Ajustado */
+}
+
+.slider-wrapper.top_fantasia #tf-2:checked ~ .dots label[for=tf-1] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_fantasia #tf-2:checked ~ .dots label[for=tf-2] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_fantasia #tf-2:checked ~ .dots label[for=tf-3] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_fantasia #tf-2:checked ~ .testimonials label[for=tf-1] {
+  transform: translateX(-100px) translateZ(-45px) rotateY(15deg); /* Ajustado */
+}
+
+.slider-wrapper.top_fantasia #tf-2:checked ~ .testimonials label[for=tf-2] {
+  z-index: 3;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_fantasia #tf-2:checked ~ .testimonials label[for=tf-2] a {
+  display: block;
+}
+
+.slider-wrapper.top_fantasia #tf-2:checked ~ .testimonials label[for=tf-2] img {
+  filter: none;
+}
+
+.slider-wrapper.top_fantasia #tf-2:checked ~ .testimonials label[for=tf-3] {
+  transform: translateX(100px) translateZ(-45px) rotateY(-15deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_fantasia #tf-2:checked ~ .testimonials label[for=tf-4] {
+  transform: translateX(200px) translateZ(-90px) rotateY(-25deg); /* Ajustado */
+  z-index: 1;
+}
+
+.slider-wrapper.top_fantasia #tf-2:checked ~ .testimonials label[for=tf-5] {
+  transform: translateX(300px) translateZ(-135px) rotateY(-35deg); /* Ajustado */
+}
+
+.slider-wrapper.top_fantasia #tf-3:checked ~ .dots label[for=tf-2] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_fantasia #tf-3:checked ~ .dots label[for=tf-3] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_fantasia #tf-3:checked ~ .dots label[for=tf-4] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_fantasia #tf-3:checked ~ .testimonials label[for=tf-1] {
+  transform: translateX(-200px) translateZ(-90px) rotateY(25deg); /* Ajustado */
+}
+
+.slider-wrapper.top_fantasia #tf-3:checked ~ .testimonials label[for=tf-2] {
+  transform: translateX(-100px) translateZ(-45px) rotateY(15deg); /* Ajustado */
+}
+
+.slider-wrapper.top_fantasia #tf-3:checked ~ .testimonials label[for=tf-3] {
+  z-index: 3;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_fantasia #tf-3:checked ~ .testimonials label[for=tf-3] a {
+  display: block;
+}
+
+.slider-wrapper.top_fantasia #tf-3:checked ~ .testimonials label[for=tf-3] img {
+  filter: none;
+}
+
+.slider-wrapper.top_fantasia #tf-3:checked ~ .testimonials label[for=tf-4] {
+  transform: translateX(100px) translateZ(-45px) rotateY(-15deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_fantasia #tf-3:checked ~ .testimonials label[for=tf-5] {
+  transform: translateX(200px) translateZ(-90px) rotateY(-25deg); /* Ajustado */
+}
+
+.slider-wrapper.top_fantasia #tf-4:checked ~ .dots label[for=tf-3] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_fantasia #tf-4:checked ~ .dots label[for=tf-4] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_fantasia #tf-4:checked ~ .dots label[for=tf-5] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_fantasia #tf-4:checked ~ .testimonials label[for=tf-1] {
+  transform: translateX(-300px) translateZ(-135px) rotateY(35deg); /* Ajustado */
+}
+
+.slider-wrapper.top_fantasia #tf-4:checked ~ .testimonials label[for=tf-2] {
+  transform: translateX(-200px) translateZ(-90px) rotateY(25deg); /* Ajustado */
+}
+
+.slider-wrapper.top_fantasia #tf-4:checked ~ .testimonials label[for=tf-3] {
+  transform: translateX(-100px) translateZ(-45px) rotateY(15deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_fantasia #tf-4:checked ~ .testimonials label[for=tf-4] {
+  z-index: 3;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_fantasia #tf-4:checked ~ .testimonials label[for=tf-4] a {
+  display: block;
+}
+
+.slider-wrapper.top_fantasia #tf-4:checked ~ .testimonials label[for=tf-4] img {
+  filter: none;
+}
+
+.slider-wrapper.top_fantasia #tf-4:checked ~ .testimonials label[for=tf-5] {
+  transform: translateX(100px) translateZ(-45px) rotateY(-15deg); /* Ajustado */
+  z-index: 1;
+}
+
+.slider-wrapper.top_fantasia #tf-5:checked ~ .dots label[for=tf-4] {
+  transform: scale(1.5);
+}
+
+.slider-wrapper.top_fantasia #tf-5:checked ~ .dots label[for=tf-5] {
+  transform: scale(2);
+}
+
+.slider-wrapper.top_fantasia #tf-5:checked ~ .testimonials label[for=tf-1] {
+  transform: translateX(-400px) translateZ(-180px) rotateY(45deg); /* Ajustado */
+  z-index: 1;
+}
+
+.slider-wrapper.top_fantasia #tf-5:checked ~ .testimonials label[for=tf-2] {
+  transform: translateX(-300px) translateZ(-135px) rotateY(35deg); /* Ajustado */
+  z-index: 2;
+}
+
+.slider-wrapper.top_fantasia #tf-5:checked ~ .testimonials label[for=tf-3] {
+  transform: translateX(-200px) translateZ(-90px) rotateY(25deg); /* Ajustado */
+  z-index: 3;
+}
+
+.slider-wrapper.top_fantasia #tf-5:checked ~ .testimonials label[for=tf-4] {
+  transform: translateX(-100px) translateZ(-45px) rotateY(15deg); /* Ajustado */
+  z-index: 4;
+}
+
+.slider-wrapper.top_fantasia #tf-5:checked ~ .testimonials label[for=tf-5] {
+  z-index: 5;
+  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.67);
+}
+
+.slider-wrapper.top_fantasia #tf-5:checked ~ .testimonials label[for=tf-5] a {
+  display: block;
+}
+
+.slider-wrapper.top_fantasia #tf-5:checked ~ .testimonials label[for=tf-5] img {
+  filter: none;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (min-width: 769px) {
+  .slider-visible {
+      display: block;
+  }
+  .image-block-visible {
+      display: none;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  hr {
+    display: none;
+  }
+  .slider-visible {
+      display: none;
+  }
+  .image-block-visible {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; 
+  }
+  .image-block-visible h3 {
+    margin-left: -3px;
+  }
+  .image-block-visible {
+    margin-left: 40px;
+  }
+  .image-block {
+    display: flex;
+    flex-direction: column; 
+}
+
+.image-block img {
+    width: 30%; 
+    margin-bottom: 10px; /* Espacio entre las imágenes */
+}
+}
