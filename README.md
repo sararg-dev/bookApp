@@ -61,7 +61,7 @@ Alejandria is a web application designed for users to track their readings, sear
 
 For any questions or suggestions, you can contact me via:
 - **Email**: sarareyesgrao@gmail.com
-- **LinkedIn**: www.linkedin.com/in/sara-reyes-grao-98242b30a
+- **LinkedIn**: www.linkedin.com/in/sarareyesgrao
 
 ---
 
