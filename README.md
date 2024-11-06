@@ -3,9 +3,7 @@
 
 Alejandria is a web application designed for users to track their readings, search for new books, rate them, and write reviews. This application was developed as my final project for my studies in Web Application Development.
 
-<img width="800" alt="alejandriaApp" src="https://github.com/sararg-dev/bookApp/assets/172597801/209cf215-ff71-49b7-997d-933f676d74d2">
-
-
+https://github.com/user-attachments/assets/fda2faf7-0675-4c57-8fb4-f7208144c752
 
 ## Technologies Used 🛠️
 
